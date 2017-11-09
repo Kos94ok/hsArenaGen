@@ -23,7 +23,6 @@ public class CSVParser {
 		}
 		
 		cards = new HashMap<>();
-		cards.put("Basic", new HashMap<>());
 		cards.put("Common", new HashMap<>());
 		cards.put("Rare", new HashMap<>());
 		cards.put("Epic", new HashMap<>());
@@ -32,7 +31,6 @@ public class CSVParser {
 		String[] classes = {"Rogue", "Shaman", "Druid", "Warlock", "Warrior", "Hunter", "Paladin", "Mage", "Priest", "Neutral"};
 		
 		for(String clas : classes) {
-			cards.get("Basic").put(clas, new ArrayList<>());
 			cards.get("Common").put(clas, new ArrayList<>());
 			cards.get("Rare").put(clas, new ArrayList<>());
 			cards.get("Epic").put(clas, new ArrayList<>());
@@ -45,6 +43,11 @@ public class CSVParser {
 		
 		String name = values[2];
 		String rarity = values[3];
+		
+		if(rarity.equals("Basic")) {
+			rarity = "Common";
+		}
+		
 		String clas = values[5];
 		String set = values[16];
 		
