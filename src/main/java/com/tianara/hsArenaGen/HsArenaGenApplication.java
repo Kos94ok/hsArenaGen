@@ -1,4 +1,4 @@
-package com.tianara.hsArenaGen.hsArenaGen;
+package com.tianara.hsArenaGen;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
