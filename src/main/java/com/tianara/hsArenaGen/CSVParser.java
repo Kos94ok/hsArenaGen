@@ -12,8 +12,10 @@ public class CSVParser {
 	
 	private Scanner sc;
 	private Map<String, Map<String, List<Card>>> cards;
-	
-	public CSVParser(File file) throws FileNotFoundException {
+
+	public CSVParser() {}
+
+	public void parse(File file) throws FileNotFoundException {
 		try {
 			sc = new Scanner(file);
 		} catch (FileNotFoundException e) {
