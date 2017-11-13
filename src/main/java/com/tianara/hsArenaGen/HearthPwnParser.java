@@ -71,7 +71,9 @@ public class HearthPwnParser {
 			
 			String nameAttr = div.attr("data-card-name");
 			
-			cards.get(rarity).get(clas).add(new Card(nameAttr));
+			for(int i = 0; i < Integer.parseInt(div.text().substring(0, 1)); i++) {
+				cards.get(rarity).get(clas).add(new Card(nameAttr));
+			}
 		}
 		
 		return cards;
